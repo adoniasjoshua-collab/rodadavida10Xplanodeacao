@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Avaliação | Roda da Vida 10X</title>
+
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='assets/css/variables.css'>
+  <link rel='stylesheet' href='assets/css/layout.css'>
+  <link rel='stylesheet' href='assets/css/components.css'>
+  <link rel='stylesheet' href='assets/css/pages.css'>
+</head>
+<body>
+  <header class='header p-4'>
+    <div class='container'>
+      <h1 class='header__logo'>Roda da Vida 10X</h1>
+    </div>
+  </header>
+
+  <main class='main-content'>
+    <section class='assessment-intro py-10'>
+      <div class='container'>
+        <p class='assessment-intro__eyebrow'>Avaliação rápida</p>
+        <h2>Complete cada área com nota de 0 a 10</h2>
+        <p>
+          Essa é a base para identificar o que está fluindo e onde você precisa agir.
+          Use sua intuição e responda com sinceridade para que o resultado seja fiel à sua vida.
+        </p>
+      </div>
+    </section>
+
+    <section class='assessment-grid-section'>
+      <div class='container'>
+        <div class='assessment-grid d-grid gap-6' id='area-grid'>
+          <!-- Cards são inseridos via JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class='assessment-actions py-10'>
+      <div class='container d-flex justify-center'>
+        <button class='btn btn--primary' id='see-results-btn'>Ver Resultados</button>
+      </div>
+    </section>
+  </main>
+
+  <script src='assets/js/storage.js'></script>
+  <script src='assets/js/areas.js'></script>
+  <script src='assets/js/avaliacao.js'></script>
+</body>
+</html>

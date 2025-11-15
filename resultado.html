@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Seu Resultado 10X | Roda da Vida</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap' rel='stylesheet'>
+
+    <!-- Project Stylesheets -->
+    <link rel='stylesheet' href='assets/css/variables.css'>
+    <link rel='stylesheet' href='assets/css/layout.css'>
+    <link rel='stylesheet' href='assets/css/components.css'>
+    <link rel='stylesheet' href='assets/css/pages.css'>
+</head>
+<body>
+    <header class='header p-4'>
+        <div class='container'>
+            <h1 class='header__logo'>Roda da Vida 10X</h1>
+        </div>
+    </header>
+    <main class='main-content py-8'>
+        <div class='container'>
+            <section class='report-info mb-8'>
+                <div class='report-info__card' id='report-info-card' aria-live='polite'></div>
+            </section>
+            <section class='result'>
+                <div class='result__header mb-8' style='text-align: center;'>
+                    <h2 class='result__title' style='font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold);'>Seu Resultado 10X</h2>
+                    <p class='result__subtitle mt-2' style='font-size: var(--font-size-lg); color: var(--text-secondary);'>Veja o panorama atual da sua vida e identifique seus pontos de alavancagem.</p>
+                </div>
+
+                <section id='life-wheel-section' class='life-wheel-container'>
+                    <canvas id='lifeWheelChart'></canvas>
+                </section>
+            </section>
+
+            <section class='analysis mt-8'>
+                <div class='analysis__layout d-grid gap-6'>
+                    <article class='analysis-card analysis-card--success'>
+                        <h3 class='analysis-card__title'>Ponto Forte</h3>
+                        <p class='analysis-card__text' id='strong-point-text'>Sua maior área de satisfação atual.</p>
+                        <span class='analysis-card__area' id='strong-point-area'>Calculando...</span>
+                    </article>
+
+                    <article class='analysis-card analysis-card--danger'>
+                        <h3 class='analysis-card__title'>Ponto Crítico</h3>
+                        <p class='analysis-card__text'>A área que mais precisa de sua atenção imediata.</p>
+                        <span class='analysis-card__area' id='critical-point-area'>Calculando...</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class='insights mt-10'>
+                <div class='container'>
+                    <div class='section-heading'>
+                        <p class='section-heading__eyebrow'>Insights Inteligentes</p>
+                        <h3 class='section-heading__title'>Feedback dinâmico para cada área</h3>
+                        <p>Baseado nas suas notas, você recebe dicas práticas, espaços emocionais e exemplos que fazem sentido no cotidiano brasileiro.</p>
+                    </div>
+                    <div class='insights-summary' id='insights-summary' aria-live='polite'></div>
+                    <div class='insights-grid' id='insights-grid' aria-live='polite'></div>
+                </div>
+            </section>
+
+            <div class='result__actions d-flex flex-wrap justify-center gap-4 mt-8'>
+                <button class='btn btn--primary' id='generate-pdf-btn'>
+                    Gerar Relatório em PDF
+                </button>
+                <a href='#' class='btn btn--secondary' id='share-whatsapp-btn'>
+                    Compartilhar no WhatsApp
+                </a>
+            </div>
+            <p class='text-center mt-4'>Dúvidas? Chama no WhatsApp do autor: <a href='https://wa.me/5594992993138' target='_blank' rel='noopener noreferrer'>94 99299-3138</a></p>
+            <section id='pdf-feedback' class='pdf-feedback' aria-live='polite'></section>
+        </div>
+    </main>
+
+    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+    <script src='assets/js/storage.js'></script>
+    <script src='assets/js/areas.js'></script>
+    <script src='assets/js/resultado.js'></script>
+</body>
+</html>
